@@ -6,7 +6,15 @@ spec:
   containers:
   - name: test
     image: test-registry.com.spb.ru/busybox:1
-    command: ["sleep", "3600"]
+    command:
+    - sh
+    - -c
+    - |
+      date > /data/date.txt
+      sleep 3600
+
+    securityContext:
+      runAsUser: 33
 
     volumeMounts:
     - name: "data"
