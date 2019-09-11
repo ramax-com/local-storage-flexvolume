@@ -25,7 +25,6 @@ nodeSelector. See https://kubernetes.io/docs/concepts/configuration/assign-pod-n
 
 ## Test volume creation:
 
-    kubectl apply -f test-pod.yaml
+    kubectl apply -f example-pod.yaml
 
-    kubectl exec test-flexvolume -- ls -l /data
-    
+    kubectl exec example-pod -- ls -l /data
