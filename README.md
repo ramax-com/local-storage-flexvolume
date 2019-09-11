@@ -17,6 +17,11 @@ support, you must explicitly bind your workload to a node using
 nodeSelector. See https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 
 
+## Requirements
+
+Python 3.x on cluster nodes.
+
+
 ## Deploy flexvolume driver to the cluster:
 
     kubectl create -n kube-system cm flexvolume-drivers --from-file=local-storage=local-storage-driver.py
