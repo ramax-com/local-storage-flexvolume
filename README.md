@@ -24,7 +24,7 @@ Python 3.x on cluster nodes.
 
 ## Deploy flexvolume driver to the cluster:
 
-    kubectl create -n kube-system cm flexvolume-drivers --from-file=local-storage=local-storage-driver.py --dry-run=client | kubectl apply -f -
+    kubectl create -n kube-system cm flexvolume-drivers --from-file=local-storage=local-storage-driver.py --dry-run=client -o yaml | kubectl apply -f -
     kubectl apply -n kube-system -f deploy-flexvolume-drivers.yaml
 
 
