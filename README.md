@@ -6,7 +6,7 @@ Create storage directory on K8S node and set UID/GID/mode for mounting into non-
       flexVolume:
         driver: ramax.com/local-storage
         options:
-          volume-mode: "33"
+          volume-uid: "33"
           volume-gid: "33"
           volume-mode: "0750"
 
@@ -24,7 +24,7 @@ Python 3.x on cluster nodes.
 
 ## Deploy flexvolume driver to the cluster:
 
-    kubectl create -n kube-system cm flexvolume-drivers --from-file=local-storage=local-storage-driver.py
+    kubectl create -n kube-system cm flexvolume-drivers --from-file=local-storage=local-storage-driver.py --dry-run=client | kubectl apply -f -
     kubectl apply -n kube-system -f deploy-flexvolume-drivers.yaml
 
 

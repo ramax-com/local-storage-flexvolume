@@ -39,7 +39,7 @@ def validate_name(s):
 
 
 def decode_options(s):
-    return json.loads(s, encoding='utf-8')
+    return json.loads(s)
 
 
 def is_mounted(mount_path):
