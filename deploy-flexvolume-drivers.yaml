@@ -33,7 +33,7 @@ spec:
                 mv -f "/flexmnt/$driver_dir/$tmp_driver" "/flexmnt/$driver_dir/$driver"
             done
 
-            while :; do sleep 3600; done
+            sleep infinity
 
 
         securityContext:
